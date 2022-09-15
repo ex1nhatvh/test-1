@@ -1,0 +1,480 @@
+{
+    "plugin_name": "FurnitureManagementSystem",
+    "plugin_view_name" : "Furniture Management System",
+    "description": "Furniture Management System for wework",
+    "uuid":  "8bdf38c0-143f-11ec-b521-0800200c9a66",
+    "author":  "CONNECTI",
+    "version": "1.0.0",
+    "plugin_type": "page",
+    "route": [
+        {
+            "uri": "",
+            "method": [
+                "get"
+            ],
+            "function": "index"
+        },
+        {
+            "uri": "sf-registry",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureRegistry"
+        },
+        {
+            "uri": "sf-onsite",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsite"
+        },
+        {
+            "uri": "sf-onsite/merge",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteMerge"
+        },
+        {
+            "uri": "sf-onsite/merge/table-merge",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteMerge"
+        },
+        {
+            "uri": "sf-onsite/after-merge",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteAfterMerge"
+        },
+        {
+            "uri": "sf-onsite/property",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteSelectProperty"
+        },
+        {
+            "uri": "sf-onsite/property/{property_id}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteSearchRoom"
+        },
+        {
+            "uri": "sf-onsite/property/{property_id}/room/{room_id}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteRedirectToQR"
+        },
+        {
+            "uri": "sf-onsite/property/{property_id}/room/{room_id}/qr",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteReadQR"
+        },
+        {
+            "uri": "sf-onsite/property/{property_id}/room/{room_id}/qr/{read_ids}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteReadQR"
+        },
+        {
+            "uri": "sf-onsite/property/{property_id}/room/{room_id}/input",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteInput"
+        },
+        {
+            "uri": "sf-onsite/property/{property_id}/room/{room_id}/input/{read_ids}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteInput"
+        },
+        {
+            "uri": "sf-onsite/property/{property_id}/room/{room_id}/confirm",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteConfirm"
+        },
+        {
+            "uri": "sf-onsite/property/{property_id}/room/{room_id}/confirm/{read_ids}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteConfirm"
+        },
+        {
+            "uri": "sf-onsite/property/{property_id}/room/{room_id}/save",
+            "method": [
+                "post"
+            ],
+            "function": "softFurnitureOnsiteSave"
+        },
+        {
+            "uri": "sf-onsite/property/{property_id}/room/{room_id}/result/{request_id}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteResult"
+        },
+        {
+            "uri": "sf-onsite/reinput/{request_id}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteReinputRedirectToQR"
+        },
+        {
+            "uri": "sf-onsite/reinput/{request_id}/qr",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteReinputQR"
+        },
+        {
+            "uri": "sf-onsite/reinput/{request_id}/qr/{read_ids}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteReinputQR"
+        },
+        {
+            "uri": "sf-onsite/reinput/{request_id}/input",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteReinput"
+        },
+        {
+            "uri": "sf-onsite/reinput/{request_id}/input/{read_ids}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteReinput"
+        },
+        {
+            "uri": "sf-onsite/reinput/{request_id}/confirm/{read_ids}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteReinputConfirm"
+        },
+        {
+            "uri": "sf-onsite/reinput/{request_id}/update",
+            "method": [
+                "put",
+                "post"
+            ],
+            "function": "softFurnitureOnsiteUpdate"
+        },
+        {
+            "uri": "sf-onsite/request",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteRequestList"
+        },
+        {
+            "uri": "sf-onsite/request/requested-detail/{date}",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteRequestedDetail"
+        },
+        {
+            "uri": "sf-onsite/request/unrequested-detail",
+            "method": [
+                "get"
+            ],
+            "function": "softFurnitureOnsiteUnrequestedDetail"
+        },
+        {
+            "uri": "sf-onsite/request/action",
+            "method": [
+                "post"
+            ],
+            "function": "softFurnitureOnsiteRequest"
+        },
+        {
+            "uri": "hf-registry",
+            "method": [
+                "get",
+                "post"
+            ],
+            "function": "hardFurnitureRegistry"
+        },
+        {
+            "uri": "hf-registry/property/{property_id}",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureRegistrySelectRoom"
+        },
+        {
+            "uri": "hf-registry/property/{property_id}/room/{room_id}",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureRegistryRegist"
+        },
+        {
+            "uri": "hf-registry/property/{property_id}/room/{room_id}/save/{hard_furniture_id}",
+            "method": [
+                "post"
+            ],
+            "function": "hardFurnitureRegistrySave"
+        },
+        {
+            "uri": "hf-registry/property/{property_id}/room/{room_id}/result/{hard_furniture_id}",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureRegistryResult"
+        },
+        {
+            "uri": "hf-onsite",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsite"
+        },
+        {
+            "uri": "hf-onsite/merge",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsiteMerge"
+        },
+        {
+            "uri": "hf-onsite/merge/table-merge",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsiteMerge"
+        },
+        {
+            "uri": "hf-onsite/after-merge",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsiteAfterMerge"
+        },
+        {
+            "uri": "hf-onsite/property",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsiteSelectProperty"
+        },
+        {
+            "uri": "hf-onsite/property/{property_id}",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsiteSelectRoom"
+        },
+        {
+            "uri": "hf-onsite/property/{property_id}/room/{room_id}",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsiteRegist"
+        },
+        {
+            "uri": "hf-onsite/property/{property_id}/room/{room_id}/save/{hard_furniture_id}",
+            "method": [
+                "post"
+            ],
+            "function": "hardFurnitureOnsiteSave"
+        },
+        {
+            "uri": "hf-onsite/property/{property_id}/room/{room_id}/result/{hard_furniture_id}/i/{hard_furniture_inventory_id}",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsiteResult"
+        },
+        {
+            "uri": "hf-onsite/request",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsiteRequestList"
+        },
+        {
+            "uri": "hf-onsite/request/requested-detail/{date}",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsiteRequestedDetail"
+        },
+        {
+            "uri": "hf-onsite/request/unrequested-detail",
+            "method": [
+                "get"
+            ],
+            "function": "hardFurnitureOnsiteUnrequestedDetail"
+        },
+        {
+            "uri": "hf-onsite/request/action",
+            "method": [
+                "post"
+            ],
+            "function": "hardFurnitureOnsiteRequest"
+        },
+        {
+            "uri": "request",
+            "method": [
+                "get"
+            ],
+            "function": "requestTop"
+        },
+        {
+            "uri": "request/{furniture_type}/{request_type}",
+            "method": [
+                "get",
+                "post"
+            ],
+            "function": "requestForm"
+        },
+        {
+            "uri": "request/{furniture_type}/{request_type}/property",
+            "method": [
+                "get",
+                "post"
+            ],
+            "function": "requestSelectProperty"
+        },
+        {
+            "uri": "request/{furniture_type}/{request_type}/property/{property_id}",
+            "method": [
+                "get",
+                "post"
+            ],
+            "function": "requestSelectRoom"
+        },
+        {
+            "uri": "request/{furniture_type}/{request_type}/save",
+            "method": [
+                "get",
+                "post"
+            ],
+            "function": "requestSave"
+        },
+        {
+            "uri": "request/{furniture_type}/table/{request_type}",
+            "method": [
+                "get"
+            ],
+            "function": "requestTable"
+        },
+        {
+            "uri": "request/{furniture_type}/table/{request_type}/{id}",
+            "method": [
+                "get",
+                "post"
+            ],
+            "function": "requestTable"
+        },
+        {
+            "uri": "api_setting",
+            "method": [
+                "get"
+            ],
+            "function": "apiSetting"
+        },
+        {
+            "uri": "api_callback",
+            "method": [
+                "get"
+            ],
+            "function": "apiCallback"
+        },
+        {
+            "uri": "furniture-map",
+            "method": [
+                "get"
+            ],
+            "function": "furnitureMap"
+        },
+        {
+            "uri": "furniture-map/{furniture_type}/property/{property_id}",
+            "method": [
+                "get"
+            ],
+            "function": "furnitureMapSelectRoom"
+        },
+        {
+            "uri": "furniture-map/{furniture_type}/property/{property_id}/room/{room_id}",
+            "method": [
+                "get"
+            ],
+            "function": "furnitureMapShow"
+        },
+        {
+            "uri": "report",
+            "method": [
+                "get"
+            ],
+            "function": "reportTop"
+        },
+        {
+            "uri": "report/create/setting",
+            "method": [
+                "get"
+            ],
+            "function": "reportCreateSetting"
+        },
+        {
+            "uri": "report/create/property",
+            "method": [
+                "get"
+            ],
+            "function": "reportSelectProperty"
+        },
+        {
+            "uri": "report/create/property/{property_id}",
+            "method": [
+                "get"
+            ],
+            "function": "reportSetTerm"
+        },
+        {
+            "uri": "report/create",
+            "method": [
+                "post"
+            ],
+            "function": "reportCreate"
+        },
+        {
+            "uri": "report/delete",
+            "method": [
+                "post"
+            ],
+            "function": "reportDelete"
+        },
+        {
+            "uri": "floor-map",
+            "method": [
+                "get"
+            ],
+            "function": "floorMap"
+        },
+		{
+            "uri": "test/test/{furniture_id}",
+            "method": [
+                "get"
+            ],
+            "function": "testtest"
+        }
+    ]
+}
